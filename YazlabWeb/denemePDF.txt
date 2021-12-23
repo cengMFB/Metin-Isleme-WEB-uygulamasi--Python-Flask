@@ -1,0 +1,210 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+
+Bu  dokümandaki  tüm  bilgiler,  etik  ve  akademik  kurallar  çerçevesinde  elde  edilip 
+sunulmuştur. Ayrıca yine bu kurallar çerçevesinde kendime ait olmayan ve kendimin 
+üretmediği  ve  başka  kaynaklardan  elde  edilen  bilgiler  ve  materyaller  (text,  resim, 
+şekil, tablo vb.) gerekli şekilde referans edilmiş ve dokümanda belirtilmiştir.Tamam. 
+
+Öğrenci No: 190201056 
+
+Adı Soyadı: Ali ÖZTÜRK 
+
+İmza:………………………………….. 
+
+Öğrenci No: 190201070 
+
+Adı Soyadı: Serhat  TAŞ 
+
+İmza:………………………………….. 
+
+ii 
+
+ 
+ 
+ 
+BAĞLI LİSTE PROJESİ  
+ 
+
+ÖZET 
+
+ 
+Bu proje kullanıcı tarafından txt dosyasına girilen ve dosya içindeki kelimeleri sayarak bağlı listeye adet olarak 
+büyükten küçüğe doğru eleman ekleme işlemini içermektedir .Bağlı listede her kelime bir defa 
+yazdırılmalıdır.Yapılan işlemlerde kelimeyi bulup adet sayısını hesaplamalıdır. Ekrana yazma sırası adet olarak 
+çok olan kelimeden az olana doğru olmalıdır. 
+ 
+ 
+ 
+ 
+ 
+Anahtar  kelimeler: LinkedList, Node, Struct, root, previous,next. 
+
+ 
+
+ix 
+
+KOCAELİ ÜNİVERSİTESİ 
+
+MÜHENDİSLİK FAKÜLTESİ 
+
+BİLGİSAYAR  MÜHENDİSLİĞİ  BÖLÜMÜ 
+
+ARAŞTIRMA PROBLEMLERİ 
+
+BAĞLI LİSTE  PROJESİ 
+
+ALİ ÖZTÜRK 
+
+ SERHAT TAŞ 
+
+Prof.Dr. Yaşar BECERİKLİ 
+Danışman, Kocaeli Üniv. 
+
+Doç.Dr.Ögr. Burcu KIR SAVAŞ  
+Jüri Üyesi, Kocaeli Üniv. 
+Dr. Öğr. Üyesi Onur GÖK 
+Jüri Üyesi, Kocaeli Üniv. 
+
+ 
+
+ 
+
+ 
+
+................................................ 
+
+................................................ 
+
+................................................ 
+
+Tezin Savunulduğu Tarih: 19.07.2018 
+
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+GİRİŞ 
+
+Güç sisteminde bir arıza oluştuğunda, maddi kayıp ve can kaybı oluşmasını önlemek 
+
+için,  arızalı  kısmın/bölgenin  sistemden  en  kısa  zamanda  ayrılması  sağlanmalıdır. 
+
+Arıza  giderildikten  sonra,  arızaya  neden  olan  etkeni  belirleyebilmek  için  arıza  yeri 
+
+bulunmalıdır.  Arıza  yeri  tespiti  için,  yakın  ya  da  uzak  baradan  ölçülen  akım  ve 
+
+gerilim  değerleri  kullanılır.  Temel  arıza  yeri  tespiti  için,  yıllar  içerisinde  birçok 
+
+çalışma  geliştirilmiştir  [1-3].  İlk  çalışmalar  ağırlıkla,  yürüyen  dalga  algoritmalarını 
+
+baz  almıştır  [4-7].  Yürüyen  dalga  algoritmaları  arıza  tipi,  arıza  dirençleri,  arıza 
+
+başlangıç açıları ve kaynak empedansları gibi değişkenlerden etkilenmeyecek şekilde 
+
+geliştirilmiştir.  Ancak  yüksek  örnekleme  frekansı  gereksinimi,  örnekleme  penceresi 
+
+seçiminde  karşılaşılan  zorluklar,  arıza  yeri  ve  uzak  baradan  yansıyan  dalgaların 
+
+birbirlerinden  ayırt  edilmesinde  yaşanılan  zorluklar,  yeni  algoritma  çalışmalarına 
+
+zemin oluşturmuştur [8]. 
+
+Yürüyen dalga algoritmalarında yaşanılan zorluklar, tek bara ve iki bara ölçümlerini 
+
+kullanan  empedansa  dayalı  algoritmaları  ön  plana  çıkarmıştır  [9,  10].  Empedansa 
+
+dayalı  algoritmalar,  basit  olarak  hat  empedansını  gerçek  ve  hesaplanan  değerlerin 
+
+karşılaştırılmasında baz alarak arıza yerini tespit etmeyi amaçlar [11]. 
+
+Tek  bara  ölçümlerini  kullanan  algoritmalar  basit,  az  maliyetli,  uzak  baranın 
+
+etkilerinin arıza yeri tespiti sonuçlarını değiştirmeyeceği algoritmalardır. Ancak arıza 
+
+yeri bulma doğruluğu, iki bara ölçümlerini kullanan algoritmaların altındadır [12, 13]. 
+
+İki bara ölçümlerini kullanan algoritmalar, daha düşük arıza yeri tespiti hata oranına 
+
+sahiptir,  özel  uygulamalar  için  (seri  kapasitör,  FACTS,  transpoze  olmamış  hatlar 
+
+gibi) daha kolaylıkla adapte edilebilirler [14-19]. 
+
+Elektrik  enerjisi  talebinde,  süregelen  artış  ve  iletim  hattının  termal  limitlerine  kadar 
+
+enerji transferi gerekliliği, iletim sistemlerinde hızlı gelişmelere yol açmıştır [20]. Bu 
+
+durum,  iletim  hatlarında  güç  transferi  kabiliyetini,  iletim  kayıplarını,  güç  sistemi 
+
+kararlılığını  ve  gerilim  kontrolünü  iyileştirme  amacıyla,  seri  kapasitörler  kullanımı 
+
+1 
+
+
